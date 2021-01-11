@@ -1,0 +1,130 @@
+@import '../../../../styles/colors';
+
+.navbarContainer {
+    background-color: $secondaryColor;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+
+    .menu_container {
+        display: none;
+    }
+
+    .navbarArea {
+        position: relative;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .drop_overlay {
+        display: none;
+        position: absolute;
+        top: 90px;
+        background-color: $lightBlue;
+        width: 100%;
+        height: 100vh;
+        z-index: 20;
+        color: $whiteColor;
+        
+        .inner {
+            width: 100%;
+            height: 100%;
+            background-color: $darkBlue;
+            clip-path: circle(65% at 52% 1%);
+            padding-top: 40px;
+        }
+
+        .drop_title {
+            font-size: 21px;
+            font-weight: 600;
+            margin-left: 50px;
+        }
+    }
+
+    .navbarContent {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        justify-content: space-between;
+        color: $whiteColor;
+        font-size: 24px;
+
+        .highlighted {
+            color:$redColor;
+        }
+    }
+
+
+    .logoStyle {
+        width: 220px;
+        height: 90px;
+    }
+
+    .menuItem {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 60px;
+
+        .drop_icon {
+            display: inline-block;
+            font-size: 15px;
+            text-align: center;
+            padding-left: 3px;
+        }
+    }
+
+    .menuItem:hover {
+        color:  $redColor;
+        transition: color 300ms ease-in;
+    }
+
+    .menuItem:active {
+        color:  $redColor;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .navbarContainer {
+        padding: 0;
+        .navbarArea {
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .menu_icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .menu_container {
+            display: block;
+        }
+
+        .navbarContent {
+            display: none;
+            text-align: center;
+            width: 100%;
+            flex-direction: column;
+
+            a {
+                display: block;
+                margin: auto;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid $whiteColor;
+                width: 100%;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+    }
+}

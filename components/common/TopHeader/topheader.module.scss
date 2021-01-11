@@ -1,0 +1,64 @@
+@import '../../../styles/colors';
+
+.headerContainer {
+    background-color: #00A1B6;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    
+    .headerContent {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 17px;
+
+        .hr {
+            display: none;
+        }
+
+        .more_info {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 780px) {
+    .headerContainer {
+        .headerContent {
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+
+            .hr {
+                display: block;
+                height: 1px;
+                background-color: $whiteColor;
+                opacity: 0.5;
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .more_info {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .more_info > div {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
